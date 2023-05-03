@@ -65,3 +65,8 @@
    public void right() {
         rotate(272);
    }
+   public void arm(int pos) {
+       // -1 down, 1 up
+       motorArm.setPower(pos);
+       sleep(900);
+   }
