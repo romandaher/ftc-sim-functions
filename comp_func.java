@@ -69,4 +69,5 @@
        // -1 down, 1 up
        motorArm.setPower(pos);
        sleep(900);
+       motorArm.setPower(0);
    }
