@@ -13,7 +13,7 @@
         R(1);
         sleep(ms);
         stop();
-        //sleep(200);
+        sleep(200);
     }
     
     public void rotate(int deg) {
