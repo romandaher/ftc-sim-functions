@@ -16,11 +16,17 @@
         sleep(200);
     }
     
-    public void rotate(int deg) {
+    public void rotate(int deg, boolean is_cc) {
         double ms = deg *(6.5 + (1/3));
         ms = ms / 2;
-        L(-1);
-        R(1);
+        if (is_cc) {
+            L(-1);
+            R(1);
+        } else {
+            L(1);
+            R(-1);
+        }
+
         sleep(ms);
         L(0);
         R(0);
@@ -59,11 +65,11 @@
    }
    
    public void left() {
-       rotate(96);
+       rotate(96, true);
    }
    
    public void right() {
-        rotate(272);
+        rotate(96, false);
    }
    public void arm(int pos) {
        // -1 down, 1 up
